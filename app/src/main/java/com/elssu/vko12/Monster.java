@@ -4,15 +4,16 @@ public abstract class Monster {
     protected String name;
     protected int life;
     protected int maxLife;
-    public Monster(String name, int life, int maxLife) {
+
+    public Monster(String name, int maxLife) {
         this.name = name;
-        this.life = life;
+        this.life = maxLife;
         this.maxLife = maxLife;
 
     }
 
     public void takeDamage(int dmg) {
-        this.life = life + dmg;
+        this.life = life - dmg;
 
     }
     public int getLife(){
