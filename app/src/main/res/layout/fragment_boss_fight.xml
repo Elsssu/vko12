@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.BossFightFragment"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/BossImage"
+            android:layout_width="232dp"
+            android:layout_height="244dp"
+            android:layout_marginTop="124dp"
+            android:src="@drawable/monsterboss"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/BossText"
+            android:layout_width="252dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="36dp"
+            android:text="GAyBoss"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="@+id/BossImage"
+            app:layout_constraintStart_toStartOf="@+id/BossImage"
+            app:layout_constraintTop_toBottomOf="@+id/BossImage" />
+
+        <ImageView
+            android:id="@+id/AttackBossButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/attack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/BossText"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="@+id/BossText"
+            app:layout_constraintTop_toBottomOf="@+id/BossText"
+            app:layout_constraintVertical_bias="0.824" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

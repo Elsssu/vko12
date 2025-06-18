@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ShowMonsterFragment"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/AttackMonsterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/attack"
+            app:layout_constraintEnd_toEndOf="@+id/MonsterLifeText"
+            app:layout_constraintHorizontal_bias="0.513"
+            app:layout_constraintStart_toStartOf="@+id/MonsterLifeText"
+            app:layout_constraintTop_toBottomOf="@+id/MonsterLifeText" />
+
+        <TextView
+            android:id="@+id/MonsterLifeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="elämä on helppoo, kun on joku josta pitää kii"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/MonsterNameText"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toStartOf="@+id/MonsterNameText"
+            app:layout_constraintTop_toBottomOf="@+id/MonsterNameText" />
+
+        <ImageView
+            android:id="@+id/MonsterImage"
+            android:layout_width="189dp"
+            android:layout_height="177dp"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/monster3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/MonsterNameText"
+            android:layout_width="248dp"
+            android:layout_height="58dp"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="100dp"
+            android:text="GAy mosnter"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="@+id/MonsterImage"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="@+id/MonsterImage"
+            app:layout_constraintTop_toBottomOf="@+id/MonsterImage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
