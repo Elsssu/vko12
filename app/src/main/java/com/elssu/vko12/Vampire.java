@@ -3,8 +3,8 @@ package com.elssu.vko12;
 import java.util.Random;
 
 public class Vampire extends Monster {
-    public Vampire(String name,int maxLife) {
-        super(name, maxLife);
+    public Vampire() {
+        super("name", 10);
         this.maxLife = randomLife();
         this.life = this.maxLife;
         this.names = new String[] {"Count Dracula", "Vlad", "Feratu", "Carmilla", "Colin Robertson" };

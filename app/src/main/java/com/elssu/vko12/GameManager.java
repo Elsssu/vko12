@@ -20,10 +20,10 @@ public class GameManager {
         boolean stuff = Math.random() < 0.5;
         Monster monster;
         if(stuff){
-            monster = new Skeleton("name", 1);
+            monster = new Skeleton();
 
         }else{
-            monster = new Vampire("name", 1);
+            monster = new Vampire();
 
         }
         latestMonster = monster;
