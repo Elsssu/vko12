@@ -16,11 +16,6 @@ import com.elssu.vko12.R;
 
 import org.w3c.dom.Text;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link BossFightFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 
 public class BossFightFragment extends Fragment {
     private boolean bossHealed = false;
