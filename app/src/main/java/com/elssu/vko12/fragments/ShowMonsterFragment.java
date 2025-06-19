@@ -43,7 +43,7 @@ public class ShowMonsterFragment extends Fragment {
 
         MonsterNameText.setText(monster[0].getName());
         String lifeStuff = monster[0].getLife() + "/" + monster[0].getMaxLife();
-        MonsterLifeText.setText(lifeStuff);
+        MonsterLifeText.setText("Elämä: " + lifeStuff);
         setMonsterImage(monster[0], MonsterImage);
 
 
