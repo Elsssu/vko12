@@ -18,6 +18,7 @@ import com.elssu.vko12.fragments.BossFightFragment;
 import com.elssu.vko12.fragments.ShowMonsterFragment;
 
 public class FightMonstersActivity extends AppCompatActivity {
+    private Button BossFight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +31,19 @@ public class FightMonstersActivity extends AppCompatActivity {
             return insets;
         });
         Button ShowMonster = findViewById(R.id.ShowMonsterFragmentButton);
-        Button BossFight = findViewById(R.id.BossFightFragmentButton);
+        BossFight = findViewById(R.id.BossFightFragmentButton);
         Button ReturnFromFight = findViewById(R.id.ReturnFromFightButton);
 
         ShowMonster.setOnClickListener(listener);
         BossFight.setOnClickListener(listener);
         ReturnFromFight.setOnClickListener(listener);
+        if(GameManager.getInstance().getPlayer().getScore()<= 100) {
+            BossFight.setEnabled(false);
+        }
     }
-
+    public void enableBossFight(){
+        BossFight.setEnabled(true);
+    }
     private View.OnClickListener listener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -47,8 +53,6 @@ public class FightMonstersActivity extends AppCompatActivity {
                 fragment = new ShowMonsterFragment();
             }else if (view.getId() == R.id.BossFightFragmentButton) {
                 fragment = new BossFightFragment();
-                Bundle data = new Bundle();
-                data.putString("dataID", "Tekstiä FightMonsterActivitystä");
             }else if (view.getId() == R.id.ReturnFromFightButton){
                 Intent intent = new Intent(view.getContext(), MainActivity.class);
                 startActivity(intent);

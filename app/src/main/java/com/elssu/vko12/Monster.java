@@ -14,7 +14,6 @@ public abstract class Monster {
 
     public void takeDamage(int dmg) {
         this.life = life - dmg;
-
     }
     public int getLife(){
         return life;

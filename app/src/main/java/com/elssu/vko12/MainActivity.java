@@ -26,7 +26,14 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        TextView PlayerScoreText =findViewById(R.id.PlayerScoreText);
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        TextView PlayerScoreText = findViewById(R.id.PlayerScoreText);
+        int playerScore = GameManager.getInstance().getPlayer().getScore();
+        PlayerScoreText.setText("Pisteet: " + playerScore);
     }
     public void switchToFightMonsters(View view) {
         Intent intent = new Intent(this, FightMonstersActivity.class);

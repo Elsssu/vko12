@@ -5,16 +5,13 @@ import java.util.ArrayList;
 public class GameManager {
     private static GameManager gameManager = null;
     private static Monster latestMonster;
-
-    public ArrayList<Monster> monsters = new ArrayList<>();
+    private Player player = new Player();
     private GameManager(){}
     public Player getPlayer() {
-        Player player = null;
         return player;
     }
-
     public static GameManager getInstance() {
-        if(gameManager == null);{
+        if(gameManager == null){
             gameManager = new GameManager();
         }
         return gameManager;
@@ -30,9 +27,8 @@ public class GameManager {
 
         }
         latestMonster = monster;
-        return latestMonster;
+        return monster;
     }
-
 
     public Monster getLatestMonster() {
         return latestMonster;

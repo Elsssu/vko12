@@ -26,10 +26,10 @@
 
         <TextView
             android:id="@+id/BossText"
-            android:layout_width="252dp"
-            android:layout_height="64dp"
+            android:layout_width="253dp"
+            android:layout_height="146dp"
             android:layout_marginTop="36dp"
-            android:text="GAyBoss"
+            android:text="Boss"
             android:textAlignment="center"
             android:textSize="34sp"
             app:layout_constraintEnd_toEndOf="@+id/BossImage"
@@ -38,15 +38,17 @@
 
         <ImageView
             android:id="@+id/AttackBossButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150pt"
+            android:layout_height="40pt"
             android:src="@drawable/attack"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/BossText"
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="@+id/BossText"
             app:layout_constraintTop_toBottomOf="@+id/BossText"
-            app:layout_constraintVertical_bias="0.824" />
+            app:layout_constraintVertical_bias="0.824"
+            android:clickable="true"
+            android:focusable="true"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

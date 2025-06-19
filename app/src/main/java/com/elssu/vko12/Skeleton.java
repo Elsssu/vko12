@@ -6,10 +6,10 @@ public class Skeleton extends Monster {
     private String[] names;
     public Skeleton(String name,int maxLife) {
         super(name,maxLife);
-        this.name = getRandomName(names);
         this.maxLife = randomLife();
-        this.life = maxLife;
+        this.life = this.maxLife;
         this.names = new String[] {"Mr.Bones", "Skelly", "Bony Stark", "Mister Boney Pants Guy", "Skellington" };
+        this.name = getRandomName(names);
     }
 
 

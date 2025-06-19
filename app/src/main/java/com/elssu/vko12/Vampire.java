@@ -5,9 +5,10 @@ import java.util.Random;
 public class Vampire extends Monster {
     public Vampire(String name,int maxLife) {
         super(name, maxLife);
-        this.name = getRandomName(names);
         this.maxLife = randomLife();
-        this.life = maxLife;
+        this.life = this.maxLife;
+        this.names = new String[] {"Count Dracula", "Vlad", "Feratu", "Carmilla", "Colin Robertson" };
+        this.name = getRandomName(names);
     }
     private String[] names;
 
